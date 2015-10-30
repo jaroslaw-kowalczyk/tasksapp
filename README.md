@@ -1,7 +1,5 @@
-tasksapp
-
 Installation:
 
-From main catalogue
+From main catalogue:
 
-bower install#
+#bower install
