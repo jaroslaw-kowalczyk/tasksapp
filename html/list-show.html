@@ -1,0 +1,24 @@
+<section ng-controller="TaskListCtrl" id="top" class="one dark cover">
+	<div class="container">
+		<header>
+			<h2 class="alt">Lista zadań</h2>
+			<p>Lista dostępnych zadań</p>
+			<input ng-model="query" placeholder="Filtruj...">
+			<ul>
+			 	<li ng-repeat="list in lists | filter:query">
+					<h2>{{list.name}}</h2>
+					<h3>{{list.desc}} </h3>
+					<a ng-click="remove($index)">usuń</a> *
+					 <a href="#/list-edit/{{$index}}">edytuj</a>
+				</li>
+			</ul>
+
+			<p><strong>Dodaj nową listę zadań</strong></p>
+			<label>Nazwa nowej listy</label> <input type="text" data-ng-model="newList.name" ><br /><br />
+			<label>Opis nowej listy</label>	 <input type="text" data-ng-model="newList.desc" ><br />
+			<button data-ng-click="addList()">Dodaj</button>
+		</header>
+		
+		<footer></footer>
+	</div>
+</section>

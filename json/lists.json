@@ -1,0 +1,42 @@
+[
+	{
+		"name" : "lista 1",
+		"desc" : "opis jednej z list",
+		"tasks" : [
+			{
+				"desc" : "Zaparzenie herbaty",
+				"realisation" : "2016-05-18",
+				"email" : "halina@wp.pl",
+				"phone" : 700123123,
+				"done" : false
+			},
+			{
+				"desc" : "Zaparzenie kawy",
+				"realisation" : "2016-05-13",
+				"email" : "praktykantka@wp.pl",
+				"phone" : 700123124,
+				"done" : false
+			}
+		]
+	},
+	{
+		"name" : "lista 2",
+		"desc" : "druga z list jest opisywana",
+		"tasks" : [
+			{
+				"desc" : "Zrobienie aplikacji RWD",
+				"realisation" : "2016-01-31",
+				"email" : "pracownik1@wp.pl",
+				"phone" : 600123123,
+				"done" : false
+			},
+			{
+				"desc" : "Przygotowanie prezentacji o Angularze",
+				"realisation" : "2014-11-21",
+				"email" : "pracownik2@wp.pl",
+				"phone" : 600123124,
+				"done" : false
+			}
+		]
+	}
+]

@@ -1,0 +1,18 @@
+<section id="top" class="one dark cover"> <!-- ng-controller="TaskListCtrl"-->
+	<div class="container">
+		<header>
+			Edytuj  zadanie nr {{taskId}} z listy nr {{listId}} <br />
+			<label>Opis: </label> <input type="text" id="desc" value="{{task.desc}}"><br/><br/>
+			<label>Data: </label> <input type="text" id="date" value="{{task.realisation}}"><br/><br/>
+			<label>Mail: </label> <input type="text" id="mail" value="{{task.email}}"><br/><br/>
+			<label>Tel.: </label> <input type="text" id="phone" value="{{task.phone}}"><br/><br/>
+			<input type="checkbox" name="done" id="done" ng-checked="{{task.done}}">Zrobione<br>
+			<button ng-click="save()">Zapisz</button>
+		</header>
+
+		
+		<footer>
+			<a href="#/list-edit/{{listId}}">Powrót do listy</a><br/>
+			<a href="#/">Główna</a><br/></footer>
+	</div>
+</section>

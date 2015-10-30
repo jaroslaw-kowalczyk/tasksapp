@@ -1,0 +1,50 @@
+<section id="top" class="one dark cover"> <!-- ng-controller="TaskEditCtrl"-->
+	<div class="container">
+		<header>
+			<div class="container">
+			<h1>Edytuj listę nr {{listId}}</h1>
+			<form name="form" class="css-form" novalidate>
+				<label>Nazwa: </label> <input type="text" id="name" value="{{currentList.name}}">
+				
+				<label>Opis: </label> <input type="text" id="name2" value="{{currentList.desc}}"><br/>
+			</form>
+			<button data-ng-click="save()">Zapisz</button><br />
+
+			<p>Zadania w obrębie listy o id <strong>{{listId}}</strong></p>
+
+			<ul>
+				<li ng-repeat="task in currentList.tasks">
+					<h2>{{$index + 1}}. {{task.desc}}</h2>
+					<h4>{{task.realisation}}</h4>
+					<h4>{{task.email}}</h4>
+					<h4>{{task.phone}}</h4>
+					<h4>Zrobione: {{task.done}}</h4>
+					<a ng-click="remove($index)">usuń</a> * 
+					 <a href="#/task-edit/{{listId}}/{{$index}}">edytuj</a>
+				</li>
+
+			</ul>
+
+			<p><strong>Dodaj nowe zadanie</strong></p>
+
+			<form name="form" class="css-form" novalidate>
+
+				<label>Opis: </label> <input type="text" id="desc">
+				<label>Data: </label> <input type="text" id="date">
+				<label>Mail: </label> <input type="email" name="email" id="mail" ng-model="task.email">
+				<label>Tel.: </label> <input type="text" name="phone" id="phone">
+				<input type="checkbox" name="done" id="done" value="Car">Zrobione<br>
+
+				<button ng-click="add()">Dodaj</button><br />
+				<div ng-show="form.email.$dirty && form.email.$invalid">
+			      <error />
+			    </div>
+			    <span ng-show="form.phone.$error.integer">The value is not a valid integer!</span>
+			</form>
+			<a href="#/">Główna</a><br/>
+		</header>
+
+		
+		<footer></footer>
+	</div>
+</section>
