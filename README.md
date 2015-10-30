@@ -2,4 +2,6 @@ Installation:
 
 From main catalogue:
 
-#bower install
+```
+bower install
+```
